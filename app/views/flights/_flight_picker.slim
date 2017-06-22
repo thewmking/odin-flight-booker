@@ -1,0 +1,24 @@
+h2 Available Flights
+.row
+  = form_tag("/bookings/new", method: "get") do
+    table
+      thead
+        tr
+          th Select
+          th Flight #
+          th Date
+          th From
+          th To
+          th Duration
+      - @available_flights.each do |flight|
+        tbody
+          tr
+            td = radio_button_tag(:id, flight.id)
+            td = flight.id
+            td = flight.departure
+            td = flight.from_airport.name
+            td = flight.to_airport.name
+            td = flight.duration
+    .row
+      = submit_tag("Select Flight")
+      = hidden_field_tag(:passenger_count, params[:passenger_count])

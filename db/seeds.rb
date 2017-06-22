@@ -10,14 +10,16 @@
 
 Airport.create([{ name: 'SFO' }, { name: 'NYC' }, { name: 'RDU' }, { name: 'LAX' }])
 
-30.times do |n|
-  from, to = 0, 0
-  until from != to
-    from = rand(1..4)
-    to   = rand(1..4)
+30.times do
+  5.times do |n|
+    from, to = 0, 0
+    until from != to
+      from = rand(1..4)
+      to   = rand(1..4)
+    end
+    Flight.create(from_airport_id: from,
+                  to_airport_id:   to,
+                  departure: rand(0.days.from_now..n.days.from_now),
+                  duration: rand(4..7))
   end
-  Flight.create(from_airport_id: from,
-                to_airport_id:   to,
-                departure: n.days.from_now,
-                duration: rand(4..7))
 end
