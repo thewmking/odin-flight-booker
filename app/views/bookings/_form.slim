@@ -1,10 +1,14 @@
 h3 Passenger info
 = form_for @booking do |b|
   = b.hidden_field :flight_id
+  - n = 1
   = b.fields_for :passengers do |p|
-    .row
-      = p.label :name
-      = p.text_field :name      
-      = p.label :email
-      = p.email_field :email
-  = b.submit "Book flight"
+    .col-md-5
+      .row.passenger_num Passenger # #{n}
+      .row
+        = p.label :name
+        = p.text_field :name, class: 'form-control', placeholder: 'First Last'
+        = p.label :email
+        = p.email_field :email, class: 'form-control', placeholder: 'example@email.com'
+    - n += 1
+  = b.submit "Book flight", class: 'btn btn-primary'

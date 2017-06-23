@@ -1,0 +1,229 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* universal */
+
+body {
+  padding-top: 65px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+  a {
+    &:hover {
+      color: #85d8db;
+    }
+    color: #00ADB5;
+  }
+}
+
+.navbar {
+  background-color: #303841;
+}
+
+
+
+a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+    }
+}
+
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .has-error;
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weight: normal;
+  }
+}
+
+
+form {
+  table {
+    width: 100%;
+    background-color: #3A4750;
+    color: #EEEEEE;
+  }
+  .btn {
+    margin-top: 10px;
+    background-color: #00ADB5;
+    &:hover {
+      background-color: #85d8db;
+      opacity: 80%;
+    }
+  }
+}
+
+td {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.5em;
+}
+
+thead {
+  background-color: #303841;
+}
+
+th {
+  font-size: 1.5em;
+  padding-top: 5px;
+}
+
+.col-md-5 {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 48%;
+  .passenger_num {
+    font-size: 1.5em;
+  }
+}
+
+.new_booking {
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
+/* flight info */
+.flight-info {
+  background-color: #3A4750;
+  color: #EEEEEE;
+  width: 35%;
+  padding: 10px;
+  border-radius: 10px;
+  h2 {
+    color: #00ADB5;
+  }
+  .flight-number {
+    font-size: 1.8em;
+  }
+}

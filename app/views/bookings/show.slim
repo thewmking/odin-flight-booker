@@ -2,8 +2,8 @@ h1 = link_to flights_path do
   span Flight Picker
 h1 Your Booking
 .flight-info
-  h2 Flight details
-  .flight_number 
+  h2.text-left Flight details
+  .flight-number 
     | Flight #
     = @booking.flight.id
   .airports
@@ -12,7 +12,7 @@ h1 Your Booking
     | Date: 
     = @flight.departure
   .passenger-info 
-    h2 Passengers
+    h2.text-left Passengers
   - @booking.passengers.each do |p|
-    .row
-      | Passenger # #{p.id} #{p.name} #{p.email}
+    div
+      | Passenger # #{p.id} | #{p.name} | #{p.email}

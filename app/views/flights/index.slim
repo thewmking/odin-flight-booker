@@ -1,6 +1,5 @@
 .row
-  h1 = link_to flights_path do
-    span Flight Picker
+  h1 Choose your flight
   = render 'search.slim'
 - if @available_flights.present?
   = render 'flight_picker.slim'

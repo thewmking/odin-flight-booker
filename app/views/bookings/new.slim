@@ -1,7 +1,7 @@
-h1 Booking
+h1 Complete your booking
 .flight-info
-  h2 Flight details
-  .flight_number 
+  h2.text-left Flight details
+  .flight-number 
     | Flight #
     = @flight.id
   .airports
@@ -9,6 +9,8 @@ h1 Booking
   .date
     | Date: 
     = @flight.departure
+  .duration
+    | Duration: #{@flight.duration} hours
 = render 'form'
 
   

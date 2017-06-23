@@ -1,16 +1,17 @@
 = form_tag("/flights", method: "get") do
+  .row
   .form-group
     .row
       = label_tag("Departing from")
-      = select_tag(:from_airport_id, options_for_select(@airports))
+      = select_tag(:from_airport_id, options_for_select(@airports), class: 'form-control')
     .row
       = label_tag("Arriving in")
-      = select_tag(:to_airport_id, options_for_select(@airports))
+      = select_tag(:to_airport_id, options_for_select(@airports), class: 'form-control')
     .row
       = label_tag("# of passengers")
-      = select_tag(:passenger_count, options_for_select(@passenger_count))
+      = select_tag(:passenger_count, options_for_select(@passenger_count), class: 'form-control')
     .row
       = label_tag("Departure date")
-      = select_tag(:departure, options_for_select(@dates))
+      = select_tag(:departure, options_for_select(@dates), class: 'form-control')
     .row
-      = submit_tag("Search")
+      = submit_tag("Search", class: "btn btn-primary")
