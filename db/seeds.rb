@@ -5,17 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-#Airport.delete_all
-#Flight.delete_all
-
-Airport.create([{ name: 'SFO' }, { name: 'NYC' }, { name: 'RDU' }, { name: 'LAX' }])
+Airport.create([{ name: 'SFO' }, { name: 'NYC' }, { name: 'RDU' }, { name: 'LAX' }, { name: 'SEA'}])
 
 30.times do
   5.times do |n|
     from, to = 0, 0
     until from != to
-      from = rand(1..4)
-      to   = rand(1..4)
+      from = rand(1..5)
+      to   = rand(1..5)
     end
     Flight.create(from_airport_id: from,
                   to_airport_id:   to,

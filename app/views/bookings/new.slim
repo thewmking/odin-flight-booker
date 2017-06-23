@@ -1,0 +1,14 @@
+h1 Booking
+.flight-info
+  h2 Flight details
+  .flight_number 
+    | Flight #
+    = @flight.id
+  .airports
+    | #{@flight.from_airport.name} >> #{@flight.to_airport.name}
+  .date
+    | Date: 
+    = @flight.departure
+= render 'form'
+
+  

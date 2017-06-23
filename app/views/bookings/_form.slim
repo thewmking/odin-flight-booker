@@ -1,0 +1,10 @@
+h3 Passenger info
+= form_for @booking do |b|
+  = b.hidden_field :flight_id
+  = b.fields_for :passengers do |p|
+    .row
+      = p.label :name
+      = p.text_field :name      
+      = p.label :email
+      = p.email_field :email
+  = b.submit "Book flight"

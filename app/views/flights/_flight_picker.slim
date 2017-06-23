@@ -13,7 +13,7 @@ h2 Available Flights
       - @available_flights.each do |flight|
         tbody
           tr
-            td = radio_button_tag(:id, flight.id)
+            td = radio_button_tag(:flight_id, flight.id)
             td = flight.id
             td = flight.departure
             td = flight.from_airport.name
