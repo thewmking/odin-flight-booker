@@ -203,37 +203,36 @@ th {
   .passenger_num {
     font-size: 1.5em;
   }
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0px;
+  }
 }
 
 .new_booking {
   margin-left: 20px;
   margin-right: auto;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0px;
+  }
 }
 
 .form-group {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  @media (max-width: 768 px) {
-    width: 90% !important;
-  }
 }
 
 .form-control {
   height: 60px;
   font-size: 1.7em;
-  @media (max-width: 768 px) {
-    height: 95px !important;
-    font-size: 2em !important;
-  }
+
 }
 
 .btn-primary {
   height: 60px !important;
   font-size: 1.5em;
-  @media (max-width: 768 px) {
-    height: 90px !important;
-  }
 }
 
 /* miscellaneous */
@@ -259,5 +258,8 @@ th {
   }
   .flight-number {
     font-size: 1.8em;
+  }
+  @media (max-width: 768px) {
+    width: 100%
   }
 }
