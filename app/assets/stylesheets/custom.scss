@@ -160,6 +160,8 @@ input {
 form {
   table {
     width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     background-color: #3A4750;
     color: #EEEEEE;
   }
@@ -202,6 +204,32 @@ th {
   margin-right: auto;
 }
 
+.form-group {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: 768 px) {
+    width: 90% !important;
+  }
+}
+
+.form-control {
+  height: 60px;
+  font-size: 1.7em;
+  @media (max-width: 768 px) {
+    height: 95px !important;
+    font-size: 2em !important;
+  }
+}
+
+.btn-primary {
+  height: 60px !important;
+  font-size: 1.5em;
+  @media (max-width: 768 px) {
+    height: 90px !important;
+  }
+}
+
 /* miscellaneous */
 
 .debug_dump {
@@ -227,3 +255,19 @@ th {
     font-size: 1.8em;
   }
 }
+
+/* media queries */
+/*
+@media (max-width: 768 px) {
+  .form-group {
+    width: 90% !important;
+  }
+  .form-control {
+    height: 95px !important;
+    font-size: 2em !important;
+  }
+  .btn-primary {
+    height: 90px !important;
+  }
+}
+*/

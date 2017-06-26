@@ -1,5 +1,6 @@
-.row
+.row.form-group
   h1 Choose your flight
   = render 'search.slim'
 - if @available_flights.present?
-  = render 'flight_picker.slim'
+  .row.form-group
+    = render 'flight_picker.slim'

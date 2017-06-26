@@ -1,6 +1,5 @@
 = form_tag("/flights", method: "get") do
   .row
-  .form-group
     .row
       = label_tag("Departing from")
       = select_tag(:from_airport_id, options_for_select(@airports), class: 'form-control')
