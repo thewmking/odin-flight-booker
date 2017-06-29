@@ -1,0 +1,16 @@
+| Hello #{@passengers.first.name}, thank you for booking your trip through Odin Flight Picker!
+|    
+| Please keep this email for reference on your departure date. 
+|    
+|  Your Booking:
+|    
+| Flight # #{@booking.flight.id}
+|    
+| #{@flight.from_airport.name} >> #{@flight.to_airport.name}
+|    
+| Date: #{@flight.departure}
+|    
+| Passengers:  
+- @booking.passengers.each do |p|
+  | Passenger # #{p.id} | #{p.name} | #{p.email}
+  |    

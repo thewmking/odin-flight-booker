@@ -1,0 +1,38 @@
+.greeting
+  p Hello #{@passengers.first.name}, thank you for booking your trip through Odin Flight Picker!
+    Please keep this email for reference on your departure date. 
+
+.flight-info
+  h2.text-left Flight details
+  .flight-number 
+    | Flight #
+    = @booking.flight.id
+  .airports
+    | #{@flight.from_airport.name} >> #{@flight.to_airport.name}
+  .date
+    | Date: 
+    = @flight.departure
+  .passenger-info 
+    h2.text-left Passengers
+  - @booking.passengers.each do |p|
+    div
+      | Passenger # #{p.id} | #{p.name} | #{p.email}
+
+css:
+  body {
+    font-family: helvetica, arial, sans-serif;
+  }
+  .flight-info {
+    background-color: #3A4750;
+    color: #EEEEEE;
+    width: 35%;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  h2 {
+    color: #00ADB5;
+  }
+  .flight-number {
+    font-size: 1.8em;
+  }
+  
