@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     if @booking.save
       flash[:success] = 'Your flight has been booked!'
       redirect_to @booking
-      PassengerMailer.thank_you_email(@booking, @booking.passengers, @booking.flight).deliver_now!
+      PassengerMailer.thank_you_email(@booking, @booking.passengers, @booking.flight).deliver
     else
       flash[:warning] = "There was an error in saving your booking"
       redirect_to root_path
